@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- font awesome-->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <!-- js file-->
+        <script src="script.js"></script> 
+        <title>Hello, world!</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <div class="col-9">
+                    <a class="navbar-brand" href="#">
+                        <i class="fab fa-instagram"></i>
+                            Instagram
+                    </a>
+                </div>
+                <div class="col-2 float-end">
+                    <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Create a new post
+                        </button>
+                    <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">New post</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                        <form id="post-form">
+                                            <textarea form="post-form" cols="48" rows="5"></textarea>
+                                        </form>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-light"><i class="fas fa-camera"></i></button>
+                                            <button type="button" class="btn btn-light"><i class="fas fa-map-marker-alt"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-success">Publish</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="dropdown float-end">
+                        <!--dropdown button-->
+                        <button type="button" class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <!--dropdown menu-->
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Log Out</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-light bg-white">
+            <div class="container d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <button type="button" onclick="displayGrid()" class="btn btn-light" data-bs-toggle="button"><i class="fas fa-th"> </i></button>
+                    <button type="button" onclick="displayList()" class="btn btn-light" data-bs-toggle="button"><i class="fas fa-bars"> </i></button>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div id="card" class="card col-4 g-0">
+                    <div class="row g-2 justify-content-around">
+                        <div class="d-flex justify-content-start col-8"><h4>My first Photo</h3></div>
+                        <div class="d-flex justify-content-end col-4"><h4>12/14</h3></div>
+                    </div>
+                    <div class="row g-0">
+                        <div class="d-flex justify-content-start col-12 g-0">
+                            <img src="https://i.picsum.photos/id/218/960/540.jpg?hmac=joOMMNWLDM36oMjOIKn0jyNckOtjSyyqrnBqVtCDBO0" width="100%" height="auto">
+                        </div>
+                    </div>
+                    <div>
+                        <div><h4>23 Likes</h4></div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis diam leo, ultrices tristique magna consectetur ac. Sed a nunc a ligula bibendum luctus. Nunc tristique hendrerit mauris, rutrum lacinia massa luctus ut. Suspendisse sapien erat, aliquam id eleifend quis, finibus a nulla.</div>
+                        <div class="row g-2 justify-content-around">
+                            <div class="col-1">
+                                <button class="btn btn-white">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="col-10">
+                                <form id="post-form" >
+                                    <input type="text" placeholder="Comment..." style="border:none">
+                                </form>
+                            </div>
+                            <div class="col-1">
+                                <button class="btn btn-white">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" class="card col-4">teste</div>
+                <div id="card" class="card col-4">teste</div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div id="card" class="card col-4">teste</div>
+                <div id="card" class="card col-4">teste</div>
+                <div id="card" class="card col-4">teste</div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div id="card" class="card col-4">teste</div>
+                <div id="card" class="card col-4">teste</div>
+                <div id="card" class="card col-4">teste</div>
+            </div>
+        </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    </body>
+</html>
