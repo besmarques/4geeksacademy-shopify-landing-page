@@ -1,3 +1,54 @@
+@font-face {
+        font-family: "Shopify Sans Web Medium"; 
+        src: url("https://db.onlinewebfonts.com/t/ad26818d844de4534fd78bb03028ca79.eot"); 
+        src: url("https://db.onlinewebfonts.com/t/ad26818d844de4534fd78bb03028ca79.eot?#iefix") format("embedded-opentype"), 
+        url("https://db.onlinewebfonts.com/t/ad26818d844de4534fd78bb03028ca79.woff2") format("woff2"), 
+        url("https://db.onlinewebfonts.com/t/ad26818d844de4534fd78bb03028ca79.woff") format("woff"), 
+        url("https://db.onlinewebfonts.com/t/ad26818d844de4534fd78bb03028ca79.ttf") format("truetype"), 
+        url("https://db.onlinewebfonts.com/t/ad26818d844de4534fd78bb03028ca79.svg#Shopify Sans Web Medium") format("svg"); 
+}
+
 * {
-        border: 1px dotted red;
+       /*border: 1px dotted red;*/
+}
+
+.fas {
+        color:#5C6AC4;
+        font-size:40px;
+}
+
+/*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+        font-family:"Shopify Sans Web Medium";
+}
+*/
+
+
+
+/*3 collumns section*/
+.tc{
+
+}
+
+.tc:before{
+        content : "";
+        position: absolute;
+        height  : 1px;
+        width   : 55%;  /* or 100px */
+        border-top:1px solid magenta;
+}
+        
+.tctitle{
+        color:#2D3740;
+        font-weight: 700;
+}
+
+.tcparagraph {
+        color:#73808D;
 }
